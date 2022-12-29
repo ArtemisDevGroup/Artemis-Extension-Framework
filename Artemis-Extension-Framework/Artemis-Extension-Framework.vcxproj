@@ -70,6 +70,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)Artemis-SoftwareDevelopmentKit;$(ProjectDir)Artemis-SoftwareDevelopmentKit\ArtemisSpecific;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(ProjectDir)Artemis-SoftwareDevelopmentKit;$(ProjectDir)Artemis-SoftwareDevelopmentKit\ArtemisSpecific;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -110,13 +116,16 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;ARTEMISEXTENSIONFRAMEWORK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>
+      </SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
+      <EnableUAC>true</EnableUAC>
+      <AdditionalDependencies>Artemis-SoftwareDevelopmentKit.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <NoEntryPoint>false</NoEntryPoint>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,29 +136,64 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;ARTEMISEXTENSIONFRAMEWORK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>
+      </SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableUAC>false</EnableUAC>
+      <EnableUAC>true</EnableUAC>
+      <AdditionalDependencies>Artemis-SoftwareDevelopmentKit.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <NoEntryPoint>false</NoEntryPoint>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="framework.h" />
-    <ClInclude Include="pch.h" />
+    <ClCompile Include="Artemis-Extension-Framework.cpp" />
+    <ClCompile Include="dllmain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
+    <Library Include="Artemis-SoftwareDevelopmentKit.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Artemis-Extension-Framework.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Array.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\Console.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\Const.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\DrawManager.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\ExtensionFramework.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\KeybindManager.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\MemoryProtectManager.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\Midnight.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\OnFrameManager.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\PresentHook.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\WindowManager.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Configuration.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\DateTime.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Definitions.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Events.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Exceptions.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imconfig.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imgui.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imgui_internal.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imstb_textedit.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imstb_truetype.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Interfaces.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Logger.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Memory.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\MemoryAllocation.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\MemoryDefinitions.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\MemoryHook.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\MemoryInjection.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\MemoryScanner.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Pipe.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Thread.h" />
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

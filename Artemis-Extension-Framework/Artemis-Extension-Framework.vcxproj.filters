@@ -13,21 +13,137 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <Filter Include="Artemis-SoftwareDevelopmentKit">
+      <UniqueIdentifier>{bfa2e003-4282-4bb6-bdd4-55d284eea74b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Artemis-SoftwareDevelopmentKit\Header Files">
+      <UniqueIdentifier>{fdbea5ed-85f2-40c2-aced-da568f5ea06f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Artemis-SoftwareDevelopmentKit\ImGui Header Files">
+      <UniqueIdentifier>{510742ee-1a67-4121-9eb6-acc386847784}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="Artemis-Extension-Framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Artemis-SoftwareDevelopmentKit.lib">
+      <Filter>Artemis-SoftwareDevelopmentKit</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Array.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Configuration.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\DateTime.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Definitions.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Events.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Exceptions.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Interfaces.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Logger.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Memory.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\MemoryAllocation.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\MemoryDefinitions.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\MemoryHook.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\MemoryInjection.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\MemoryScanner.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Pipe.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Thread.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\Vector.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\Console.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\Const.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\DrawManager.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\KeybindManager.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\MemoryProtectManager.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\Midnight.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\OnFrameManager.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\PresentHook.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\WindowManager.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imconfig.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\ImGui Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imgui.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\ImGui Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imgui_impl_dx11.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\ImGui Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imgui_impl_win32.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\ImGui Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imgui_internal.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\ImGui Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imstb_rectpack.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\ImGui Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imstb_textedit.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\ImGui Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ImGui\imstb_truetype.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\ImGui Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-Extension-Framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Artemis-SoftwareDevelopmentKit\ArtemisSpecific\ExtensionFramework.h">
+      <Filter>Artemis-SoftwareDevelopmentKit\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
